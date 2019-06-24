@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+kotlinc -script -verbose ./kotlin/_rename_icons.kts
+
 inp="../_icons"
 out="../widgets/src/main/res/drawable"
 for z in $inp/*.svg
@@ -16,4 +18,4 @@ rename -f 's/_xml//' $out/*.xml
 rename -f 's/_svg//' $out/*.xml
 rm *.xml
 
-kotlinc -script -verbose _update_drawables.kts
+kotlinc -script -verbose ./kotlin/_update_drawables.kts
