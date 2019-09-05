@@ -1,5 +1,3 @@
-package au.sjowl.scripts
-
 import java.io.File
 
 fun File.children(): Sequence<File> {
